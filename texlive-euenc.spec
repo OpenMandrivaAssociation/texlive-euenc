@@ -1,3 +1,9 @@
+# revision 19795
+# category Package
+# catalog-ctan /macros/latex/contrib/euenc
+# catalog-date 2010-09-19 01:22:04 +0200
+# catalog-license lppl1.3
+# catalog-version 0.1h
 Name:		texlive-euenc
 Version:	0.1h
 Release:	1
@@ -65,6 +71,7 @@ use with the Latin Modern OpenType fonts.
 #- source
 %doc %{_texmfdistdir}/source/latex/euenc/Makefile
 %doc %{_texmfdistdir}/source/latex/euenc/euenc.dtx
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -75,3 +82,5 @@ use with the Latin Modern OpenType fonts.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
