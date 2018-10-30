@@ -6,7 +6,7 @@
 # catalog-version 0.1h
 Name:		texlive-euenc
 Version:	0.1h
-Release:	10
+Release:	11
 Summary:	Unicode font encoding definitions for XeTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/euenc
