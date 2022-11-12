@@ -1,19 +1,13 @@
-# revision 19795
-# category Package
-# catalog-ctan /macros/latex/contrib/euenc
-# catalog-date 2010-09-19 01:22:04 +0200
-# catalog-license lppl1.3
-# catalog-version 0.1h
 Name:		texlive-euenc
-Version:	0.1h
-Release:	11
+Version:	19795
+Release:	1
 Summary:	Unicode font encoding definitions for XeTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/euenc
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/euenc.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/euenc.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/euenc.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/euenc.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/euenc.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/euenc.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -32,12 +26,12 @@ distribution). The package includes font definition files for
 use with the Latin Modern OpenType fonts.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -64,24 +58,11 @@ use with the Latin Modern OpenType fonts.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.1h-2
-+ Revision: 751659
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.1h-1
-+ Revision: 718382
-- texlive-euenc
-- texlive-euenc
-- texlive-euenc
-- texlive-euenc
-
