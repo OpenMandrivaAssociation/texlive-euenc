@@ -3,7 +3,7 @@ Version:	19795
 Release:	2
 Summary:	Unicode font encoding definitions for XeTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/euenc
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/euenc
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/euenc.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/euenc.doc.r%{version}.tar.xz
